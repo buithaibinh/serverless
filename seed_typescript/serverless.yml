@@ -1,0 +1,48 @@
+service:
+  name: seed_ts
+
+plugins:
+  - serverless-webpack
+  - serverless-iam-roles-per-function
+  - serverless-dynamodb-local
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stackName: ${self:service}-${self:provider.stage}
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'ap-southeast-1'}
+
+  tracing:
+    apiGateway: true
+    lambda: true
+  logs:
+    restApi: true
+    websocket: true
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules:
+      forceExclude:
+        - aws-sdk
+  serverless-offline:
+    port: 4005
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+      seed: false
+    stages:
+      - dev
+  serverless-iam-roles-per-function:
+    defaultInherit: true
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          method: get
+          path: hello

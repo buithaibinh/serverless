@@ -1,0 +1,29 @@
+{
+  "name": "seed-serverless",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "export SLS_DEBUG=* && export NODE_DEBUG=appsync-* && serverless dynamodb install && serverless offline start",
+    "deploy": "export SLS_DEBUG=* && sls deploy -v"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.537.0",
+    "serverless-iam-roles-per-function": "^2.0.2",
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "serverless-dynamodb-local": "^0.2.38",
+    "serverless-offline": "^5.11.0",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  },
+  "license": "MIT"
+}

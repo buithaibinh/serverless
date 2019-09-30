@@ -1,0 +1,5 @@
+.vscode/**
+
+seed_typescript/.dynamodb/*
+seed_typescript/node_modules/*
+seed_typescript/.serverless/*
