@@ -1,0 +1,25 @@
+service: serverless-hbs-compiler
+
+frameworkVersion: ">=v1.46.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules:
+      forceExclude:
+        - aws-sdk
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          path: /
+          method: get

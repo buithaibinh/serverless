@@ -25,5 +25,6 @@
     "typescript": "^3.2.4",
     "webpack": "^4.29.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Bui Van Binh <bvbinh@sk-global.biz> (https://sk-global.biz/)"
 }

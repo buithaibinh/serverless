@@ -3,3 +3,7 @@
 seed_typescript/.dynamodb/*
 seed_typescript/node_modules/*
 seed_typescript/.serverless/*
+
+handlebars-compiler/.dynamodb/*
+handlebars-compiler/node_modules/*
+handlebars-compiler/.serverless/*

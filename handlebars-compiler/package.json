@@ -1,0 +1,35 @@
+{
+  "name": "handlebars-compiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "export SLS_DEBUG=* && serverless offline start"
+  },
+  "author": "Bui Van Binh <bvbinh@sk-global.biz> (https://sk-global.biz/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "handlebars-loader": "^1.7.1",
+    "serverless-offline": "^4.8.1",
+    "serverless-webpack": "^5.2.0",
+    "source-map-support": "^0.5.10",
+    "supertest": "^3.4.2",
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "handlebars": "^4.1.2"
+  }
+}
