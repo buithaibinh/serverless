@@ -9,7 +9,7 @@
     "deploy": "export SLS_DEBUG=* && sls deploy -v"
   },
   "dependencies": {
-    "aws-sdk": "^2.537.0",
+    "aws-sdk": "^2.814.0",
     "serverless-iam-roles-per-function": "^2.0.2",
     "source-map-support": "^0.5.10"
   },
